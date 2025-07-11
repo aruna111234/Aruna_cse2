@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Demo</title>
+
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* --- Global resets --- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Poppins", sans-serif; line-height: 1.6; }
+
+    /* --- Utility classes --- */
+    .container { max-width: 1200px; margin: auto; padding: 0 1rem; }
+    .btn       { display: inline-block; background:#2563eb; color:#fff;
+                 padding:0.75rem 1.5rem; border-radius:0.5rem; text-decoration:none; }
+    .grid      { display: grid; gap: 2rem; }
+
+    /* --- Header --- */
+    header { background:#1e293b; color:#fff; }
+    nav    { display:flex; justify-content:space-between; align-items:center;
+             padding:1rem 0; }
+    nav ul { display:flex; gap:1rem; list-style:none; }
+
+    /* --- Hero section --- */
+    .hero  { padding:4rem 0; align-items:center; }
+    .hero img { width:100%; height:auto; border-radius:1rem; }
+
+    /* --- Footer --- */
+    footer { text-align:center; padding:1rem 0; background:#0f172a; color:#94a3b8; }
+
+    /* ----------- Breakpoints ----------- */
+    /* ≥ 768 px (tablet) */
+    @media (min-width:768px) {
+      .hero      { grid-template-columns: 1fr 1fr; }
+      nav ul li a{ color:#fff; transition:opacity .2s; }
+      nav ul li a:hover { opacity:.7; }
+    }
+    /* ≥ 1024 px (desktop) */
+    @media (min-width:1024px) {
+      nav ul     { gap:2rem; }
+      .hero h1   { font-size:3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========= HEADER ========= -->
+  <header>
+    <div class="container">
+      <nav>
+        <h2>Logo</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <section class="hero container grid">
+    <div>
+      <h1>Build Responsive Sites&nbsp;Fast</h1>
+      <p>Create beautiful, flexible layouts that look great on every device.</p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
+    <img src="https://picsum.photos/id/1005/800/600" alt="Illustration" />
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+    <p>© 2025 Responsive Demo. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
